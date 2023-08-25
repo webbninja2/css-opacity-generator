@@ -1,0 +1,76 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <title>CSS Text MASK</title>  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+        <style>
+            div#sampleText {font-size: 80px;height: 200px;margin: 20px auto;display: flex;align-items: center;justify-content: center;text-align: center;flex-direction: column;background-image: url('assets/images/mask-image1.jpg');-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
+        </style>
+    </head>      
+    <body>  
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-8 form-generator">
+                    <div class="boxLaoyut">
+                        <div class="box" id="box">
+                           <h3>Sample Text</h3>
+                        </div>
+                        <div class="image-box" id="imageBox">
+                           <img src="https://via.placeholder.com/200x200" id="displayedImage" alt="Image">
+                        </div>
+                        <div class="display-text" id="displayText">
+                           <p id="textval">Sample Text</p>
+                        </div>
+                    </div>
+                    <div class="tab-container">
+                        <div class="tab" id="divBoxTab">Div Box</div>
+                        <div class="tab" id="imageTab">Image</div>
+                        <div class="tab" id="textTab">Text</div>
+                    </div>
+                    <div class="generatorOptions">
+                        <div class="optionlabel">Color Options</div>
+                        <div class="opacity-picker">
+                           <label for="opacityRange">Opacity:</label><br>
+                           <input type="range" id="opacityRange" min="0" max="1" step="0.01" value="1"><br>
+                           <input type="number" id="opacityInput" min="0" max="1" step="0.01" value="1" style="width: 100px;">
+                        </div>
+                        <div class="box-colors hidden">
+                           <label for="boxColor">Box Color:</label><br>
+                           <input type="color" id="boxColor" value="#d5b4b4">
+                           <input type="text" class="vv" id="manualBoxColor" placeholder="color code">
+                        </div>
+                        <div class="text-colors hidden">
+                           <label for="textColor">Text Color:</label><br>
+                           <input type="color" id="textColor" value="#000000">
+                           <input type="text" id="manualTextColor" placeholder="color code">
+                        </div>
+                        <div class="background-colors">
+                           <label>Background Color:</label><br>
+                           <div class="color-box" id="whiteBox" style="background-color: white"></div>
+                           <div class="color-box" id="blackBox" style="background-color: black"></div>
+                           <div class="color-box" id="imageBackground" style="background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC1JREFUeNpiPHPmDAM2YGxsjFWciYFEMKqBGMD4//9/rBJnz54dDSX6aQAIMABCtQiAsDRF+wAAAABJRU5ErkJggg==');"></div>
+                        </div>
+                        <div class="text-content" id="textContent">
+                           <label>Enter your text:</label><br>
+                           <input type="text" id="dummyText" placeholder="Sample Text" maxlength="25">
+                        </div>
+                        <!-- // image upload -->
+                        <div class="image-Upload hidden">
+                           <div class="upload-background" id="imageUpload">
+                              <label for="imageUpload">Upload Text Background Image:</label><br>
+                              <input type="file" id="uploadedImage">
+                           </div>
+                        </div>
+                        <button id="generateCodeButton"><img src="assets/images/tools2.png"> Generate Code</button>
+                    </div>
+                </div>
+                <div class="cols col_4_of_12">
+                    <h3>Sidebar</h3>
+                </div>
+            </div>
+        </div>
+        <script src="assets/js/custom.js"></script>
+    </body>  
+</html>  
